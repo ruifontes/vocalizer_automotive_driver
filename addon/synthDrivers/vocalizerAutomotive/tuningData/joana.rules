@@ -1,0 +1,54 @@
+[header]
+language = ptp
+charset = utf-8
+
+[data]
+# Este ficheiro e respectivo conteúdo pertence à Tiflotecnia, Lda;
+# Só é permitida a utilização deste ficheiro com o Nuance Vocalizer para o NVDA.
+# Números:
+# Milhares:
+/(\d)( )(\d{3})/   -->   $1$2$2$3
+/(n.º)/   -->   número
+/(\d+)(.ª)/   -->   $1ª
+/(\d+)(.º)/   -->   $1º
+# Graus centígrados:
+/(1)(ºC| ºC)/   -->   "$1 grau centígrado"
+/([234567890])(ºC| ºC)/   -->   "$1 graus centígrados"
+/(\d+)( Metros 2)/   -->   "$1 metros quadrados"
+# Palavras:
+/([Bb])(ANAN|anan)(\w)/   -->   \e\/+ba0na0%~n\e\/+$3
+/(\b)(BAN|BaN|ban)(\w)/   -->   \e\/+ba0n\e\/+$3
+/(ceç)/   -->   cecç
+/(doção)/   -->   docção
+/(doções)/   -->   docções
+/(\b)([Ee])(CO|co)(SIS|sis)/   -->   $1\e\/+EkOsiS\e\/+
+/(\b)([Ee])(CONO|cono)(\w)/   -->   $1\e\/+ikOnu\e\/+$4
+/(\b)([Ee])(CONÓ|conó)(\w)/   -->   $1\e\/+ikunO\e\/+$4
+/(\b)([Ee])(CO|co)(\w)/   -->   "$1\e\/+EkO\e\/+ $4"
+/(\b)([Ee])([Nn])(c|d|f|g|h|j|k|l|q|r|s|v|x|z)(\w)/   -->   $1\e\/+e%~\e\/+$4$5
+/(\b)([Ee])(TI|ti)(\w)/   -->   $1\e\/+e\e\/+$3$4
+/(fet)/   -->   fect
+/(Fix|fix)(\w)/   -->   "fiks$2"
+/(jeç)/   -->   jecç
+/(jeta)/   -->   jecta
+/(jete)/   -->   jecte
+/(jeti)/   -->   jecti
+/(jeto)/   -->   jecto
+/(jetu)/   -->   jectu
+/(\b)(Mara|mara)/   -->   \e\/+ma0r6a0\e\/+
+/(\b)(Mare|mare)(\w)/   -->   "$1\e\/+ma0r6$\e\/+$3"
+/(anex)/   -->   \e\/+a0nek&s\e\/+
+/(osamente)/   -->   ósamente
+/([Pp])(ROF|rof)([Ee])(\w)/   -->   $1$2$4
+#/(^|\s)([Rr])([AaEeIiOoUu])/   -->   $1\e\/+R\\\e\/+$3
+/(\b)([Rr])(AP|ap)/   -->   $1\e\/+R\\a0p\e\/+
+#/(\w)(ret)(\w)/   -->   $1rect$3
+#/(rreta)/   -->   rrêta
+#/(areta)/   -->   arêta
+/(Sexa|sexa)(\w)/   -->   \e\/+sEk&sa0\e\/+$2
+/(\b)(Sexis|sexis|ssexis)(\w)/   -->   \e\/+sEk&siS\e\/+$3
+/(\b)(Sexo|sexo)/   -->   \e\/+sEk&su\e\/+
+/(Sexu|sexu|ssexu)(\w)/   -->   \e\/+sEk&su\e\/+$2
+/(suç)/   -->   sucç
+/(teção)/   -->   tecção
+/(teções)/   -->   tecções

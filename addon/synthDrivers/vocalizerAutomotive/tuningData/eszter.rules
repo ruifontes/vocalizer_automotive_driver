@@ -1,0 +1,32 @@
+﻿[header]
+language = HUH
+charset = utf-8
+[data]
+#/0xc3a1/ --> "á"
+/([0-9]+)\.([0-9]+[0-9]+)/   -->   $1pont$2
+/([0-9]+)\.([0-9])/   -->   $1pont$2
+# a szám.szám kifejezések javítása
+/([0-9]|1\d|2[0-4]) óra/   -->   $1_óra
+/([0-9]|1\d|2[0-3]) óra/   -->   $1_óra
+/([1-9]|1\d|2[0-3]) óra/   -->   $1_óra
+# 12 óra
+/([0-9]+)p/   -->   $1_p
+/([0-9]+) p/   -->   $1_p
+# 1p
+/([aeiouöüóőúűéáí])ncsz([aeiouöüóőúűéáí])/   -->   $1nc_sz$2
+/([aeiouöüóőúűéáíy])ck([aeiouöüóőúűéáíy])/   -->   $1c_k$2
+#kecki
+/lánchíd/   -->   lánc_híd
+/Lánchíd/   -->   lánc_híd
+#láncszem, lánchíd
+/([aeiouöüóőúűéáí])gysz([aeiouöüóőúűéáí])/   -->   $1_gysz$2
+#egyszerű
+/user/   -->   us_er
+/User/   -->   us_er
+#users
+/online/   -->   on_line
+/Online/   -->   on_line
+/offline/   -->   offli_ne
+/Offline/   -->   offli_ne
+/firefox/   -->   fire_fox
+/Firefox/   -->   fire_fox

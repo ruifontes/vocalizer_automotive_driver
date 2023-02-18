@@ -1,0 +1,8 @@
+[header]
+language = ptp
+charset = utf-8
+
+[data]
+/(\d)( )(\d{3})/   -->  $1$2$2$3
+/(\b)([Ee])([Nn])(\w)/   -->  $1\e\/+e%~\e\/+$4
+
