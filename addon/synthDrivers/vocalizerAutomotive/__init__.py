@@ -1,16 +1,16 @@
 #vocalizer/__init__.py
 #A part of the vocalizer driver for NVDA (Non Visual Desktop Access)
 #Copyright (C) 2012 Rui Batista <ruiandrebatista@gmail.com>
-#Copyright (C) 2012 Tiflotecnia, lda. <www.tiflotecnia.com>
+#Copyright (C) 2012 - 2023 Tiflotecnia, lda. <www.tiflotecnia.net>
 #Copyright (C) 2019 Leonard de Ruijter (Babbage B.V.) <leonard@babbage.com>
 #This file is covered by the GNU General Public License.
 #See the file GPL.txt for more details.
 
+# Import the necessary modules
 from collections import OrderedDict
 import math
 import operator
 import wx
-
 import addonHandler
 from synthDriverHandler import SynthDriver as BaseDriver, VoiceInfo, synthIndexReached, synthDoneSpeaking
 import languageHandler

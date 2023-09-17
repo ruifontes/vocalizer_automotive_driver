@@ -1,10 +1,11 @@
 #vocalizer/_vocalizer.py
 #A part of the vocalizer driver for NVDA (Non Visual Desktop Access)
 #Copyright (C) 2012 Rui Batista <ruiandrebatista@gmail.com>
-#Copyright (C) 2012 Tiflotecnia, lda. <www.tiflotecnia.com>
+#Copyright (C) 2012 - 2023 Tiflotecnia, lda. <www.tiflotecnia.net>
 #This file is covered by the GNU General Public License.
 #See the file GPL.txt for more details.
 
+# Import the necessary modules
 from ctypes import *
 import os.path
 import queue
@@ -18,10 +19,10 @@ import winKernel
 # Import Vocalizer type definitions, constants and helpers.
 from ._vautoTypes import *
 
-
 # Python functions and callbacks
 class BgThread(threading.Thread):
 	""" Background thread to process assynchronous requeusts."""
+
 	def __init__(self):
 		threading.Thread.__init__(self)
 		self.setDaemon(True)
@@ -111,7 +112,6 @@ def callback(instance, outDev, message, userData):
 	return NUAN_OK
 
 
-
 _basePath = os.path.abspath(os.path.dirname(__file__))
 vautoDll = None
 platformDll = None
@@ -186,7 +186,6 @@ def initialize(indexCallback=None):
 		bitsPerSample=16,
 		outputDevice=config.conf["speech"]["outputDevice"],
 	)
-
 
 
 def open(voice=None):

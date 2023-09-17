@@ -2,10 +2,11 @@
 #vocalizer_globalPlugin/__init__.py
 #A part of the vocalizer driver for NVDA (Non Visual Desktop Access)
 #Copyright (C) 2012 Rui Batista <ruiandrebatista@gmail.com>
-#Copyright (C) 2012 Tiflotecnia, lda. <www.tiflotecnia.com>
+#Copyright (C) 2012 - 2023 Tiflotecnia, lda. <www.tiflotecnia.net>
 #This file is covered by the GNU General Public License.
 #See the file GPL.txt for more details.
 
+# Import the necessary modules
 import datetime
 import gettext
 import os.path
@@ -16,6 +17,7 @@ import subprocess
 import configobj
 import wx
 import addonHandler
+# Start the translating process
 addonHandler.initTranslation()
 import core
 import globalVars
@@ -24,8 +26,6 @@ import gui
 import languageHandler
 from logHandler import log
 import speech
-# For update process
-from . update import *
 from .dialogs import *
 from .utils import *
 
@@ -103,14 +103,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self.createMenu()
 			self.showInformations()
 		self._running = True
-
-		# To allow waiting end of network tasks
-		core.postNvdaStartup.register(self.networkTasks)
-
-	def networkTasks(self):
-		# Calling the update process...
-		_MainWindows = Initialize()
-		_MainWindows.start()
 
 	def createMenu(self):
 		self.submenu_items = []

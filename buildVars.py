@@ -20,12 +20,13 @@ addon_info = {
 	# Add-on summary, usually the user visible name of the addon.
 	# Translators: Summary for this add-on
 	# to be shown on installation and add-on information found in Add-ons Manager.
-	"addon_summary": _("Nuance Vocalizer 5.5 Driver"),
+	"addon_summary": _("Vocalizer Automotive 5.5 Driver"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-	"addon_description": _("""Nuance Vocalizer 5.5 speech synthesizer driver and interface for NVDA."""),
+	"addon_description": _("""Driver and interface for Nuance Vocalizer Automotive 5.5.
+To use it, you must have a valid license and install, at least, one voice downloadable from https://tiflotecnia.net/downloads.htm"""),
 	# version
-	"addon_version": "2.1.4",
+	"addon_version": "2.1.5",
 	# Author(s)
 	"addon_author": "Tiflotecnia, LDA. <tiflotecnia@tiflotecnia.com>",
 	# URL for the add-on documentation support
@@ -37,7 +38,7 @@ addon_info = {
 	# Minimum NVDA version supported (e.g. "2018.3.0", minor version is optional)
 	"addon_minimumNVDAVersion": 2019.3,
 	# Last NVDA version supported/tested (e.g. "2018.4.0", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion": 2023.1,
+	"addon_lastTestedNVDAVersion": 2024.1,
 	# Add-on update channel (default is None, denoting stable releases,
 	# and for development releases, use "dev".)
 	# Do not change unless you know what you are doing!
@@ -56,7 +57,7 @@ addon_info = {
 # pythonSources = ["addon/globalPlugins/*.py"]
 # For more information on SCons Glob expressions please take a look at:
 # https://scons.org/doc/production/HTML/scons-user/apd.html
-pythonSources = ["addon/globalPlugins/vocalizer_automotive_globalPlugin/*.py", "addon/synthDrivers/vocalizerAutomotive/*.py", "addon/*.py"]
+pythonSources = ["addon/globalPlugins/vocalizer_automotive_globalPlugin/*.py", "addon/synthDrivers/vocalizerAutomotive/*.py"]
 
 # Files that contain strings for translation. Usually your python sources
 i18nSources = pythonSources + ["buildVars.py"]
