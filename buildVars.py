@@ -26,7 +26,7 @@ addon_info = {
 	"addon_description": _("""Driver and interface for Nuance Vocalizer Automotive 5.5.
 To use it, you must have a valid license and install, at least, one voice downloadable from https://tiflotecnia.net/downloads.htm"""),
 	# version
-	"addon_version": "2.1.5",
+	"addon_version": "2.1.6",
 	# Author(s)
 	"addon_author": "Tiflotecnia, LDA. <tiflotecnia@tiflotecnia.com>",
 	# URL for the add-on documentation support
